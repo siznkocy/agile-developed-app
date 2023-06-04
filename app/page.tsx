@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="bg-black h-screen">
-      <h1 className="flex">Hi, I'm Sizwe N.</h1>
+    <main className="bg-black h-screen grid place-content-center">
+      <h1 className="">NOstra</h1>
     </main>
   );
 }
