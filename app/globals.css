@@ -2,12 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  /* global button style */
+  .btn {
+    @apply py-3 h-fit px-3 rounded-md border-[0.1rem] border-secondary-400 flex justify-center gap-1;
+  }
+
+  .btn-size-full {
+    @apply w-full;
+  }
+
+  .btn-size-fit {
+    @apply w-fit;
+  }
+
+  .btn-icon {
+    @apply btn h-fit w-fit;
+  }
+
+  /* primary button */
+
+  .btn-primary {
+    @apply btn bg-primary-100 text-secondary-200;
+  }
+
+  .btn-primary-disabled {
+    @apply btn bg-secondary-300 text-secondary-500;
+  }
+
+  .btn-primary-active {
+    @apply btn bg-white text-primary-100;
+  }
+
+  /* secondary button */
+
+  .btn-secondary {
+    @apply btn w-full;
+  }
+
+  /**
+   * Text
+   */
+
+  /* todo: apply the font here */
+
+  .text {
+    @apply text-xs;
+  }
+
+  .text-primary {
+    @apply text;
+  }
+
+  .text-seconday {
+    @apply text;
+  }
 }
