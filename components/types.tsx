@@ -1,4 +1,4 @@
-import { IconType } from "react-icons/lib";
+import { IconBaseProps, IconType } from "react-icons/lib";
 
 export interface JSXIndex {
   [type: string]: JSX.Element;
@@ -9,7 +9,7 @@ export interface stringIndex {
 }
 
 export interface Index {
-  [type: string]: string | boolean | JSX.Element;
+  [type: string]: string | boolean | number | JSX.Element | IconType;
 }
 
 // button type
@@ -17,9 +17,9 @@ export interface Index {
 export interface buttonProps {
   children: React.ReactNode;
   button: string;
-  icon: boolean;
   isDisabled: boolean;
   isActive: boolean;
-  text: string;
-  icons: IconType;
+  text: string | number;
+  icon: IconType;
+  onClick: () => void;
 }
