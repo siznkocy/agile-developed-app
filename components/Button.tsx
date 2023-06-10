@@ -2,18 +2,14 @@ import React from "react";
 import { Index, JSXIndex, buttonProps } from "./types";
 import { Typography } from "./Typography";
 import {
-  BsArrowLeftShort,
   BsArrowRightShort,
   BsCart,
   BsCartDash,
   BsCartPlus,
   BsDashLg,
-  BsPlus,
   BsPlusLg,
   BsTrash3,
 } from "react-icons/bs";
-import { IconType } from "react-icons/lib";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 
 export const TypeOfButtons: Index[] = [
   { text: "Subscribe", isDisabled: true, isActive: false, button: "pri" },
@@ -106,14 +102,15 @@ export const TypeOfButtons: Index[] = [
 
 export const Button = ({
   children,
-  icon,
   button,
   text,
   isDisabled = false,
   isActive,
   onClick,
 }: Partial<buttonProps>) => {
-  const primaryClass = `${text ? "btn-size-full" : "btn-size-fit"} ${
+  const primaryClass = `justify-center ${
+    text ? "btn-size-full" : "btn-size-fit"
+  } ${
     isDisabled
       ? "btn-primary-disabled"
       : isActive
@@ -130,14 +127,14 @@ export const Button = ({
         : "btn-secondary hover:btn-secondary-active-1"
     }`;
 
-  const secondaryClass2 = `btn-size-full
+  const secondaryClass2 = `btn-size-full 
     ${
       isDisabled
         ? "btn-secondary-disabled"
         : isActive
         ? "btn-secondary-active-2"
         : "btn-secondary hover:btn-secondary-active-2"
-    }`;
+    } justify-between`;
 
   const plain = `${isDisabled ? "" : ""}`;
 

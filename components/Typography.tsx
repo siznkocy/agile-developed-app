@@ -45,7 +45,9 @@ export const Typography = ({ text, type = "p1" }: Partial<stringIndex>) => {
     h4: <h4 className={`${arimo} text-sm font-semibold`}>{text}</h4>,
     p1: <p className={`${arimo} text-sm font-medium`}>{text}</p>,
     p2: (
-      <p className={`${arimo} text-sm font-normal text-secondary-500`}>
+      <p
+        className={`${arimo} text-sm font-normal text-secondary-600 opacity-70`}
+      >
         {text}
       </p>
     ),

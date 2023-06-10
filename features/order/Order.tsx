@@ -5,13 +5,8 @@ import { LineSectionTemplate } from "../Templates/LineSectionTemplate";
 
 export const Order = () => {
   return (
-    <LineSectionTemplate>
-      <div>
-        <img src="pic" alt="pic" />
-        <div>product name</div>
-        <div>product color</div>
-        <div>qty</div>
-      </div>
-    </LineSectionTemplate>
+    <article>
+      <img src="" alt="" className="" />
+    </article>
   );
 };

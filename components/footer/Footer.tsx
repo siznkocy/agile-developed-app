@@ -15,11 +15,11 @@ const Menu = (props: {
   children?: Array<any>;
 }) => {
   const menu = (
-    <ul className="mx-auto w-fit">
+    <ul className="mx-auto lg:mx-0 w-fit">
       <li
         className={`${
           props.href === "1" ? "pb-4" : "pt-2"
-        } whitespace-nowrap  min-w-[30rem] md:min-w-full`}
+        } whitespace-nowrap  `}
       >
         {props.href === "1" ? (
           <Typography text={props.label} type={"p1"} />
@@ -41,9 +41,9 @@ const Menu = (props: {
 
 export const Footer = () => {
   return (
-    <footer className="bg-secondary-400 min-h-10 py-12 w-full">
-      <section className="mx-auto space-y-8 lg:space-y-0 w-full max-w-5xl lg:text-left text-center justify-between flex lg:flex-row flex-col">
-        <article className="w-fit mx-auto lg:ml-0 lg:mr-auto max-w-[20rem]">
+    <footer className="bg-secondary-400 min-h-10 w-full">
+      <section className="mx-auto pt-10 pb-6 space-y-8 lg:space-y-0 w-full max-w-5xl lg:text-left text-center justify-between flex lg:flex-row flex-col">
+        <article className="w-fit lg:w-full mx-auto lg:ml-0 lg:mr-auto lg:max-w-[20rem] max-w-full px-10 lg:px-0">
           <Logo />
           <Typography
             text={
@@ -52,7 +52,7 @@ export const Footer = () => {
             type={"p2"}
           />
         </article>
-        <article className="flex gap-12 flex-col md:flex-row ">
+        <article className="flex gap-x-12 gap-y-6 flex-col md:flex-row ">
           <Menu label={shop.label} href={shop.href}>
             {shop.children}
           </Menu>
@@ -74,6 +74,12 @@ export const Footer = () => {
           </div>
         </div>
       </section>
+      <div className="border-t-2 rounded-sm py-5 border-secondary-500 border-opacity-50 max-w-5xl mx-auto text-center">
+        <Typography
+          text={"copyright ©2022 Nostra. All right reserved "}
+          type={"p2"}
+        />
+      </div>
     </footer>
   );
 };

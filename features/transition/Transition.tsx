@@ -1,8 +1,6 @@
 import { Typography } from "@/components/Typography";
 import React from "react";
-import { LineSectionTemplate } from "../Templates/LineSectionTemplate";
-
-// ! temporally data
+import { OrderStatus } from "./OrderStatus";
 
 export const Transaction = () => {
   const data: { title: string; type: string }[] = [
@@ -20,15 +18,11 @@ export const Transaction = () => {
     },
   ];
 
-  return (
-    <section className="w-full">
-      <article className="border-2 rounded-md border-slate-100 m-2 p-5 divide-y-2 divide-slate-100 w-full max-w-lg mx-auto my-auto">
-        <p className="text-lg ">transaction</p>
+  const successful = true;
 
-        <LineSectionTemplate>
-          <Typography text={"Transaction"} type={"primary_m"} />
-        </LineSectionTemplate>
-      </article>
-    </section>
+  return (
+    <article className="rounded-md p-5 border max-w-3xl mx-auto">
+      <OrderStatus />
+    </article>
   );
 };

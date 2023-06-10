@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-  /* global button style */
+  /** Border */
+
+  /** Buttons */
   .btn {
-    @apply p-3 h-fit rounded-md border-[0.1rem] border-secondary-400 flex justify-between items-center;
+    @apply p-3 h-fit rounded-md border-1 border-secondary-400 flex items-center;
   }
 
   .btn-size-full {
-    @apply w-full;
+    @apply w-full text-center;
   }
 
   .btn-size-fit {
